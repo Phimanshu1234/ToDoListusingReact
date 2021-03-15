@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import ToDoLists from "./ToDoLists"
+import ToDoLists from "./ToDoLists";
+import AddIcon from "@material-ui/icons/Add";
+import Button from "@material-ui/core/Button";
+import Tooltip from "@material-ui/core/Tooltip";
 const Appdata=()=>{
     const [inputList,setInputList]=useState("");
     const [Items,setItems]=useState([]);
@@ -29,7 +32,9 @@ return (<>
 <h1>ToDo List</h1> 
 <br/> 
 <input type="text" placeholder='Add a Items' value={inputList} onChange={ItemEvent}/>
-<button onClick={ListOfItems}>+ </button>
+<Tooltip title="Add">
+<Button onClick={ListOfItems} className="btn_green"><AddIcon/></Button>
+</Tooltip>
 <ol>
     {/*<li>{inputList}</li>*/}
 

@@ -24,6 +24,9 @@
   align-items: center;
   text-align: center;
 }
+.btn_green:hover {
+  color: #2ed573;
+}
 h1{
   color: white;
   background: transparent;
